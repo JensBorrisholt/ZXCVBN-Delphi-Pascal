@@ -383,6 +383,17 @@ begin
   end;
 
   word := AMatch.Token;
+  with TStringList.Create do
+  try
+    CaseSensitive := false;
+    Duplicates := dupIgnore;
+    if FileExists('C:\aa\aa.txt') then
+      LoadFromFile('C:\aa\aa.txt');
+     Add(word);
+  finally
+    SaveToFile('C:\aa\aa.txt');
+    free;
+  end;
   if (TRegex.IsMatch(word, Zxcvbn.PasswordScoring.StartUpper)) then
   begin
     Include(AResult.Suggestions, TZxcvbnSuggestion.zsCapsDontHelp);

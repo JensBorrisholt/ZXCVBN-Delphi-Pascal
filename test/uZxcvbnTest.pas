@@ -25,16 +25,16 @@ type
       (Password: 'qwER43@!'; ExpectedEntropy: 26.865;
         ExpectedWarning: 'Short keyboard patterns are easy to guess';
         ExpectedSuggestions: ( 'Add another word or two. Uncommon words are better.', 'Use a longer keyboard pattern with more turns','' )),
-      (Password: 'Tr0ub4dour&3'; ExpectedEntropy: 32.56;
+      (Password: 'Tr0ub4dour&3'; ExpectedEntropy: 31.56;
         ExpectedWarning: '';
         ExpectedSuggestions: ( 'Add another word or two. Uncommon words are better.', 'Capitalization doesn''t help very much','Predictable substitutions like ''@'' instead of ''a'' don''t help very much' )),
       (Password: 'correcthorsebatterystaple'; ExpectedEntropy: 46.904;
         ExpectedWarning: '';
         ExpectedSuggestions: ( '', '','' )),
-      (Password: 'coRrecth0rseba++ery9.23.2007staple$'; ExpectedEntropy: 65.649;
+      (Password: 'coRrecth0rseba++ery9.23.2007staple$'; ExpectedEntropy: 62.65;
         ExpectedWarning: '';
         ExpectedSuggestions: ( '', '','' )),
-      (Password: 'D0g..................'; ExpectedEntropy: 22.396;
+      (Password: 'D0g..................'; ExpectedEntropy: 21.396;
         ExpectedWarning: 'Repeats like "aaa" are easy to guess';
         ExpectedSuggestions: ( 'Add another word or two. Uncommon words are better.', 'Avoid repeated words and characters','' )),
       (Password: 'abcdefghijk987654321'; ExpectedEntropy: 11.951;
@@ -67,7 +67,7 @@ type
         ExpectedWarning: 'This is a very common password';
         ExpectedSuggestions: ( 'Add another word or two. Uncommon words are better.', '','' )),
       //original library return '' which is less good in that case
-      (Password: 'ScoRpi0ns'; ExpectedEntropy: 20.49;
+      (Password: 'ScoRpi0ns'; ExpectedEntropy: 15.279;
         ExpectedWarning: 'This is similar to a commonly used password';
         ExpectedSuggestions: ( 'Add another word or two. Uncommon words are better.', 'Predictable substitutions like ''@'' instead of ''a'' don''t help very much','' )),
       //original library gives 3/4 score here while this library gives 0
@@ -97,7 +97,7 @@ type
       (Password: 'rosebud'; ExpectedEntropy: 8.409;
         ExpectedWarning: 'This is a very common password';
         ExpectedSuggestions: ( 'Add another word or two. Uncommon words are better.', '','' )),
-      (Password: 'Rosebud'; ExpectedEntropy: 9.409;
+      (Password: 'Rosebud'; ExpectedEntropy: 8.409;
         ExpectedWarning: 'This is a very common password';
         ExpectedSuggestions: ( 'Add another word or two. Uncommon words are better.', 'Capitalization doesn''t help very much','' )),
       (Password: 'ROSEBUD'; ExpectedEntropy: 9.409;
@@ -112,7 +112,7 @@ type
       (Password: 'r0s3bud99'; ExpectedEntropy: 15.053;
         ExpectedWarning: 'This is similar to a commonly used password';
         ExpectedSuggestions: ( 'Add another word or two. Uncommon words are better.', 'Predictable substitutions like ''@'' instead of ''a'' don''t help very much','' )),
-      (Password: 'R0$38uD99'; ExpectedEntropy: 18.538;
+      (Password: 'R0$38uD99'; ExpectedEntropy: 17.538;
         ExpectedWarning: 'This is similar to a commonly used password';
         ExpectedSuggestions: ( 'Add another word or two. Uncommon words are better.', 'Predictable substitutions like ''@'' instead of ''a'' don''t help very much','' )),
       //original library gives 4/4 score here while this library gives 1
@@ -128,7 +128,7 @@ type
       (Password: 'rWibMFACxAUGZmxhVncy'; ExpectedEntropy: 107.977;
         ExpectedWarning: '';
         ExpectedSuggestions: ('', '', '')),
-      (Password: 'Ba9ZyWABu99[BK#6MBgbH88Tofv)vs$w'; ExpectedEntropy: 160.607;
+      (Password: 'Ba9ZyWABu99[BK#6MBgbH88Tofv)vs$w'; ExpectedEntropy: 158.607;
         ExpectedWarning: '';
         ExpectedSuggestions: ('', '', ''))
     );
